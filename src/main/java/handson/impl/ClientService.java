@@ -12,25 +12,24 @@ import java.util.Properties;
 public class ClientService {
     /**
      * Creates a blocking sphere client
+     *
      * @return Sphere client
-     * @throws IOException
      */
     public static SphereClient createSphereClient() throws IOException {
-
         final SphereClientConfig clientConfig = loadCTPClientConfig();
-
-        return null;
+        final HttpClient httpClient = new SphereAsyncHttpClientFactory().getClient();
+        final SphereAccessTokenSupplier accessTokenSupplier = SphereAccessTokenSupplier.ofAutoRefresh(clientConfig, httpClient, true);
+        return SphereClient.of(clientConfig, httpClient, accessTokenSupplier);
     }
 
     /**
      * Sets a sphere client configuration
+     *
      * @return sphere client configuration
-     * @throws IOException
      */
     private static SphereClientConfig loadCTPClientConfig() throws IOException {
-
-        return null;
-
-
+        Properties properties = new Properties();
+        properties.load(ClientService.class.getResourceAsStream("/dev.reznichenka.properties"));
+        return SphereClientConfig.ofProperties(properties, "ctp.");
     }
 }

@@ -14,7 +14,7 @@ hs_err_pid*
 .idea
 *.iml
 target
-src/main/resources/dev.properties
+src/main/resources/dev.sample.properties
 
 # various IDEs
 .setttings

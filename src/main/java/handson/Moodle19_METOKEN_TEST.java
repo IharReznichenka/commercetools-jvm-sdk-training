@@ -52,7 +52,7 @@ public class Moodle19_METOKEN_TEST {
 
             // TODO: Test the meOrders endpoint
             //
-            String clientID = "5HEQ28SkOxxAad7q34oTA1G6";                   // TODO Parse from dev.properties
+            String clientID = "5HEQ28SkOxxAad7q34oTA1G6";                   // TODO Parse from dev.sample.properties
             String clientSecret = "y2dPYAB2HckRpMcPlxkir8Zdv_iLA1Ks";
             String projectID = "training-etribes-dec2019-def";
 

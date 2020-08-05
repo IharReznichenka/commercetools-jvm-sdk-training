@@ -16,7 +16,7 @@ public class BaseTest {
 
     @Before
     public void setup() throws IOException {
-        client = createSphereClient("/dev.properties");
+        client = createSphereClient("/dev.sample.properties");
     }
 
     protected SphereClient createSphereClient(String configLocation) throws IOException {

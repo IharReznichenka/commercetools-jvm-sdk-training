@@ -21,7 +21,7 @@ public class ProductSearchServiceTest extends BaseTest {
     public void setup() throws IOException {
         super.setup();
         productSearchService = new ProductSearchService(client());
-        final SphereClient sphereClient = createSphereClient("/facets-dev.properties");
+        final SphereClient sphereClient = createSphereClient("/facets-dev.sample.properties");
         facetProductSearchService = new ProductSearchService(sphereClient);
     }
 
